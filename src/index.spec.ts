@@ -23,4 +23,9 @@ describe('String calculator', () => {
   test('Should add the numbers in the given comma separated string', () => {
     expect(Add('1,5')).toBe(6);
   });
+
+  test('Should be able to handle any amount of numbers', () => {
+    expect(Add('1,2,3,4')).toBe(10);
+    expect(Add('1,2,3,4,5,6,7,8,9,10')).toBe(55);
+  });
 });
