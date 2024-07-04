@@ -28,4 +28,8 @@ describe('String calculator', () => {
     expect(Add('1,2,3,4')).toBe(10);
     expect(Add('1,2,3,4,5,6,7,8,9,10')).toBe(55);
   });
+
+  test('Should be able to handle new lines between numbers (instead of commas)', () => {
+    expect(Add('1\n2,3')).toBe(6);
+  });
 });
