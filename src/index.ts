@@ -5,7 +5,7 @@ function Add(numbers: string): number | string {
       const splitNumbers = numbers.split('-');
       const negNumbers: string[] = [];
 
-      // extract the negative numbers
+      // Extract the negative numbers
       splitNumbers.forEach((item) => {
         if (item.length) {
           const firstChar = Number(item.split('')[0]);
@@ -22,7 +22,19 @@ function Add(numbers: string): number | string {
     if (numbers.length === 1) {
       result = Number(numbers);
     } else if (numbers.length > 1) {
+      // Perform the main logic to add only numbers
+      const replaceChars = numbers.replace(/[^0-9]/g, ',');
+      if (replaceChars.length) {
+        const extractedNumbers = replaceChars
+          .split(',')
+          .filter((item) => item.length)
+          .map((item) => Number(item));
+        result = extractedNumbers.reduce((a, b) => a + b, 0);
+        return result;
+      }
     }
+
+    // Check if passed value does not contain any numbers in it
     const isNotANumber = isNaN(Number(numbers));
     if (isNotANumber) {
       result = 0;

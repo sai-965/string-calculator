@@ -19,4 +19,8 @@ describe('String calculator', () => {
     expect(Add('-1')).toBe('negative numbers not allowed -1');
     expect(Add('-1,234,-4,-5')).toBe('negative numbers not allowed -1,-4,-5');
   });
+
+  test('Should add the numbers in the given comma separated string', () => {
+    expect(Add('1,5')).toBe(6);
+  });
 });
