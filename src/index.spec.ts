@@ -1,5 +1,7 @@
-describe('test', () => {
-  test('add', async () => {
-    expect(1 + 1).toEqual(2);
-  });
+import Add from './index';
+
+describe('String calculator', () => {
+  test('Should return 0 when empty value is passed as input', () => {
+    expect(Add('')).toBe(0)
+  })
 });
