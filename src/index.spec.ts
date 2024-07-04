@@ -17,5 +17,6 @@ describe('String calculator', () => {
 
   test('Should throw an error when a negative number is passed as input', () => {
     expect(Add('-1')).toBe('negative numbers not allowed -1');
+    expect(Add('-1,234,-4,-5')).toBe('negative numbers not allowed -1,-4,-5');
   });
 });

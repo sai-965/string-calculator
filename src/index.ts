@@ -16,6 +16,7 @@ function Add(numbers: string): number | string {
       });
 
       result = `negative numbers not allowed ${negNumbers.join(',')}`;
+      return result;
     }
 
     if (numbers.length === 1) {
