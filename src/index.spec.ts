@@ -10,6 +10,10 @@ describe('String calculator', () => {
     expect(Add('abc')).toBe(0);
   });
 
+  test('Should return 0 when a combination of alphabets and special characters is passed as input', () => {
+    expect(Add('a#$iniad;/.,')).toBe(0);
+  });
+
   test('Should return the same number when only character is passed as input', () => {
     expect(Add('1')).toBe(1);
     expect(Add('4')).toBe(4);
