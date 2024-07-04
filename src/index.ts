@@ -1,14 +1,15 @@
 function Add(numbers: string): number | string {
-    let sum = 0;
-    if(numbers.length){
-        if(numbers.length === 1){
-           const isNotANumber = isNaN(Number(numbers))
-           if(isNotANumber){
-            sum = 0
-           }
-        }
+  let sum = 0;
+  if (numbers.length) {
+    if (numbers.length === 1) {
+    } else if (numbers.length > 1) {
     }
-    return sum
+    const isNotANumber = isNaN(Number(numbers));
+    if (isNotANumber) {
+      sum = 0;
+    }
+  }
+  return sum;
 }
 
-export default Add
+export default Add;

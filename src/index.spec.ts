@@ -7,5 +7,6 @@ describe('String calculator', () => {
 
   test('Should return 0 when only alphabet is passed as input', () => {
     expect(Add('a')).toBe(0)
+    expect(Add('abc')).toBe(0)
   })
 });
