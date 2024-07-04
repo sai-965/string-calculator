@@ -23,6 +23,10 @@ describe('String calculator', () => {
     expect(Add('-1,234,-4,-5')).toBe('negative numbers not allowed -1,-4,-5');
   });
 
+  test('Should return 0 when negative sign without a number is passed as input', () => {
+    expect(Add('-')).toBe(0);
+  });
+
   test('Should add the numbers in the given comma separated string', () => {
     expect(Add('1,5')).toBe(6);
   });
