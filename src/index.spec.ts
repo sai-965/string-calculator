@@ -32,4 +32,8 @@ describe('String calculator', () => {
   test('Should be able to handle new lines between numbers (instead of commas)', () => {
     expect(Add('1\n2,3')).toBe(6);
   });
+
+  test('Should support different delimiters', () => {
+    expect(Add('//;\n1;2')).toBe(3);
+  });
 });
